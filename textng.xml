@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="smoke suite">
+
+    <test name="calculator test">
+        <classes>
+            <class name="com.cydeo.tests.akbar_Class.login.CalculatorTest"/>
+            <class name="com.cydeo.tests.akbar_Class.login.BeforeSuiteAfterSuiteBeforeTestAfterTest"/>
+        </classes>
+    </test>
+
+    <test name="Data driven tests">
+        <classes>
+            <class name="com.cydeo.tests.akbar_Class.login.DataProviderTest"/>
+            <class name="com.cydeo.tests.akbar_Class.login.GoogleHomePageTest"/>
+        </classes>
+    </test>
+
+    <test name="Single Method test">
+        <classes>
+            <class name="com.cydeo.tests.akbar_Class.login.GoogleHomePageTest">
+                <methods>
+                    <include name="testHomePage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Single package test">
+
+        <packages>
+            <package name="tests.login"/>
+
+        </packages>
+        <classes>
+            <class name="com.cydeo.tests.akbar_Class.login.BeforeSuiteAfterSuiteBeforeTestAfterTest"/>
+        </classes>
+
+    </test>
+
+</suite>
